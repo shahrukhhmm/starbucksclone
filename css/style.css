@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+:root{
+    --font:'Source Sans Pro', sans-serif;
+    --clr-dark-green:#1E3932;
+    --clr-black: rgba(0,0,0,0.8);
+    --clr-light-green:#D4E9E2;
+    --clr-lightest-green:#DDEAE3;
+    --clr-green: #006241;
+}
+.dark-green{
+    background-color: var(--clr-dark-green);
+}
+.light-green{
+    background-color: var(--clr-light-green);
+}
+.lightest-green{
+    background-color: var(--clr-lightest-green);
+}
+.green{
+    background-color: var(--clr-green);
+}
+
+body{
+    font-family: var(--font);
+    overflow-x: hidden;
+}
+body.hide-overflow{
+   
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    
+    padding: 1.5rem;
+    -webkit-box-shadow: 0px 4px 8px -2px #000000; 
+box-shadow: 0px 2px 8px -6px #000000;
+}
+.fa-map-marker-alt{
+    font-size: 1.2rem;
+}
+nav .logo img{
+    height: 50px;
+   
+}
+nav .nav-link{
+    color: black;
+}
+nav ul a{
+    letter-spacing: .1rem;
+}
+nav a{
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+    
+}
+nav a:hover{
+    color: var(--clr-green) !important;
+}
+nav ul{
+    flex-grow: 1;
+}
+.nav-btn{
+    border: 1px solid black;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    background-color: transparent;
+}
+.nav-btn:hover{
+    background-color: rgba(0,0,0,.1);
+    color: black !important;
+}
+.nav-btn-dark{
+    color: white !important;
+    background-color: black;
+}
+.nav-btn-dark:hover{
+    background-color: var(--clr-black) !important;
+    color: white !important;
+}
+
+/* sidenav */
+.fa-bars{
+    display: none;
+
+}
+.fa-times{
+    display: none;
+}
+
+.side-nav{
+    position: fixed;
+    width: 80%;
+    top: 70px;
+    right: -80vw;
+    bottom: 0;
+    min-height: 400px;
+    z-index: 2;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+.side-nav.toggle{
+    right: 0;
+}
+.side-nav a{
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+.side-nav a:hover{
+    color: var(--clr-green);
+}
+#side-nav-cover{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+#side-nav-cover.toggle{
+    display: block;
+}
+/* menu */
+
+.sidebar-internal{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+   
+}
+.menuinternal{
+    font-size: 1.3rem;
+    display: none;
+}
+.menu-heading{
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+     background-color: #F9F9F9;
+
+}
+.menu-btnclose{
+    cursor: pointer;
+}
+.menu-btnclose:hover{
+   transform: scale(1.3);
+}
+.menu-btnopen{
+    cursor: pointer;
+}
+.menu-btnopen:hover{
+   transform: scale(1.3);
+}
+
+
+
+@media only screen and (max-width: 980px){
+    nav{
+        padding: 1.3rem;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .fa-times{
+        display: none;
+    }
+}
+@media only screen and (max-width: 880px){
+    nav{
+        padding: 1rem;
+    }
+    nav .logo img{
+        height: 40px;
+    }
+    nav a{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 815px){
+    nav{
+        justify-content: space-between;
+        box-shadow: 5px 4px 5px -3px rgba(0,0,0,0.2);
+        padding: 1rem;
+        position: relative;
+        z-index: 3;
+    }
+    nav ul.nav, nav .social{
+        display: none;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding:8px 11px 8px 10px ;
+        border-radius: 50%;
+        transition: all .5s linear;
+        
+    }
+    .fa-bars:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+     
+    }
+    .fa-times{
+        display: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding:8px 11px 8px 10px ;
+        border-radius: 50%;
+        transition: all .5s linear;
+    }
+    .fa-times:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    
+    }
+}
+
+
+@media only screen and (orientation: portrait){
+    body{
+        overflow-x: hidden;
+    }
+}
+
+
+/* navbar end finally */
+.explorebtn{
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s linear;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.explorebtn:hover{
+    background-color: rgb(253, 253, 253,0.1);
+    color: white !important;
+}
+
+/* nextsection
+ */
+.ordinary-btn{
+    background-color: transparent;
+    color: var(--clr-black);
+    border: 1px solid black;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s linear;
+    
+}
+.ordinary-btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black !important;
+}
+.img-left{
+    border-right: 15px solid white;
+}
+.img-right{
+    border-left: 15px solid white;
+}
+
+.lastlink-des{
+    text-decoration: underline;
+    color: #000000;
+}
+.lastlink-des:hover{
+    text-decoration: none;
+    color: #000000;
+}
+.social-links a{
+    padding: 12.5px 8px 15px 8px;
+    
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.social-links a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+   
+}
+footer .links a:hover{
+    text-decoration: underline;
+}
+footer .links a:nth-child(2){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+footer .links a:nth-child(3){
+    border-right: 1px solid black;
+}
+@media only screen and (max-width: 780px){
+    .img-left, .img-right{
+        border: none;
+    }
+    footer .links a{
+        border: none !important;
+    }
+}
+.dropwalaseen a{
+    text-decoration: none;
+    color: #666666;
+
+}
+.dropwalaseen a:hover{
+    color: #000000;
+}
+.btn-1, .btn-2, .btn-3,.btn-4,.btn-5{
+    display: none;
+    
+}
+.btnrotate{
+    transform: rotate(180deg);
+}
+button{
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+
+@media only screen and (max-width: 992px){
+    .bottom-1,.bottom-2,.bottom-3,.bottom-4,.bottom-5{
+       display:none;
+    }
+    .btn-1, .btn-2, .btn-3,.btn-4,.btn-5{
+        display: block;
+        outline: none;
+    }
+}
